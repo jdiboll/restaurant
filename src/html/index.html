@@ -10,61 +10,89 @@
 <div class="app"> <!-- START OF "APP" WRAPPING DIV -->
 
 <header> <!-- START OF HEADER -->
-		<h3 class="logo">Ye Olde</h3>
-		<div class="social_media"> <!-- ICONS ICONS ICONS -->
-			<a href="www.facebook.com">
-				<i class="fa fa-facebook-square"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-twitter-square"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-instagram"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-yelp"></i>
-			</a>
-		<!-- PLACEHOLDER FOR OPENTABLE ICON -->
-		 		</div>
+	<h3 class="logo">Ye Olde</h3>
+	<div class="social_media"> <!-- ICONS ICONS ICONS -->
+		<a href="www.facebook.com">
+			<i class="fa fa-facebook-square"></i>
+		</a>
+		<a href="www.facebook.com">
+			<i class="fa fa-twitter-square"></i>
+		</a>
+		<a href="www.facebook.com">
+			<i class="fa fa-instagram"></i>
+		</a>
+		<a href="www.facebook.com">
+			<i class="fa fa-yelp"></i>
+		</a>
+	<!-- PLACEHOLDER FOR OPENTABLE ICON -->
+	 		</div>
 
 </header> <!-- END OF HEADER -->
 
 <div class="main"> <!-- START OF MAIN DIV -->
 	<div class="main-above"> <!-- NEWS & SPECIAL & LOCATION -->
+		<img id="gyro" src="../images/3969427384_0531f66282_o.jpg">
 		<ul>
-			<li class="news-special-location">
-		
+			<li class="news-special-map">
+				<div class="box-header" id="news-header">
+					Latest News
+		  		</div>
+		  		<div id="news">
+		  		</div>
 			</li>
-			<li class="news-special-location special-header">
-		  			
+			<li class="news-special-map special-header">
+		  		<div class="box-header" id="news-header">
+		  			Today's Special
+		  		</div>
+		  		<div id="special">
+		  		</div>
 			</li>
-			<li class="news-special-location">
-		  			
+			<li class="news-special-map">
+		  		<div class="box-header" id="news-header">
+		  			Our Location
+		  		</div>
+		  		<div id="map">
+		  		</div>
 			</li>
 		</ul>
 	</div> <!-- END OF NEWS & SPECIAL & LOCATION -->
 
 	<div class="main-below"> <!-- BUTTONS & CONTENT & IMAGES ON THE RIGHT -->
 		<div class="main-below-left">
-			
+			<div class="story">
+				<p>
+					In 2004, two friends, John and Joshua, were playing video games together on their back porch in Atlanta, GA.  After several hours of play, they sat back and reached into their refrigerator for a brew and a sandwich, only to come up short.  They didn’t want to stop gaming in order to get some grub, but they didn’t have a choice.
+				</p>
+				<p>
+					“Wouldn’t it be great to get some food and continue to play at the same place?” asked John.  Joshua agreed. And the concept for “Ye Olde” was born.  It wasn’t until the year 2005 that they were able to see their plans materialize.
+				</p>
+				<img id="story-image" src="../images/1683739679_a02caff951_z.jpg">
+				<p>
+					“Ye Olde” opened their doors on March 1, 2005 to positive reviews.  With a warm and welcoming atmosphere, classic British pub-style grub, and a selection of delicious and unique beer choices, “Ye Olde” is popular with young and old alike.  It rocketed into the spotlight when it hosted events for the popular gaming convention MomoCon in 2006.
+				</p>
+				<p>
+					In 2011, John and Joshua opened a second pub, called “Ye New” at the Atlanta Perimeter.
+				</p>
+
+			</div>
 		</div>
 
 		<div class=main-below-right>
 			<ul>
 				<li>
-					<img src="">
+					<img class="side-image" src="">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="">
 				</li>
 			</ul>
 		</div>
@@ -79,8 +107,18 @@
 
 </div>  <!-- END OF "APP" WRAPPING DIV -->
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap"
-    async defer></script>
-  <script src="js/bundle.js"></script>
+ <script>
+	function initMap() {
+  		var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 33.751894, lng: -84.391327},
+      zoom: 8
+    });
+}
+</script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap">
+</script>
+<script src="js/bundle.js"></script>
 </body>
 </html>
