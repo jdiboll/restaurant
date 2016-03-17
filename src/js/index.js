@@ -1,28 +1,84 @@
-// Javascript Entry Point
-
 import $ from 'jquery';
 
-// import { getYear, getSeconds } from './current_year'
+import form_data from './template_for_forms';
 
-// news
-
-
-// special_api
+import { lineOfText, commentSection, selectSeat } from './template_for_forms';
 
 
-// google_maps
+// 
+
+var $app = $('.app');
+
+form_data.forEach(function(datum) {
+	var template;
+	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
+		template = lineOfText;
+	} else if (datum.type === "textarea") {
+		template = commentSection;
+	} else if (datum.type === "select") {
+		template = selectSeat;
+	}
+	var html = template(datum);
+	$app.append(html);
+});
 
 
-// menu
 
 
-// reservations
 
 
-// reviews
 
 
-// current_year
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Function for the bottom copyright date.
 
 function nowSeconds() {
 	var today;
@@ -37,3 +93,19 @@ function nowSeconds() {
  };
 
  var intID = window.setInterval(nowSeconds, 1000);
+
+
+
+// function nowYear() {
+	// var today;
+	// var currentYear;
+
+	// today = new Date();
+	// currentYear = today.getFullYear();
+
+	// var copyrightYear = document.querySelector('.copyright')
+
+ // 	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
+ // };
+
+ // var intID = window.setInterval(nowYear, 1000);
