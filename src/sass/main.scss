@@ -1,1 +1,92 @@
 /* CSS Entry Point */
+
+ @import 'font-awesome';
+
+ ul {
+ 	margin: 0;
+ 	padding: 0;
+ }
+
+ li {
+ 	list-style: none;
+ 	padding: 0;
+ }
+
+ body {
+ 	margin: 0;
+ }
+
+ .app {
+ 	margin: auto;
+ 	width: 940px;
+ }
+
+
+header {
+	border-bottom: 1px solid #b2b2b2;
+}
+
+ .logo {
+ 	font-family: 'Poiret One', cursive;
+ 	font-size: 50px;
+ 	margin: 0;
+ }
+
+ a {
+ 	text-decoration: none;
+ }
+
+ .fa {
+ 	color: black;
+ 	font-size: 40px;
+ 	&.fa-facebook-square {
+ 		&:hover {
+ 			color: #43609c;
+ 		}
+ 	}
+ 	&.fa-twitter-square {
+ 		&:hover {
+ 			color: #5ea9dd;
+ 		}
+ 	}
+ 	&.fa-instagram {
+ 		&:hover {
+ 			color: #365985;
+ 		}
+ 	}
+ 	&.fa-yelp {
+ 		&:hover {
+ 			color: #d03626;
+ 		}
+ 	}
+ }
+
+ .main {
+ 	// background: blue;
+ 	height: 1000px;
+ }
+
+ .main-above {
+ 	margin: 20px 0px 20px 0px;
+ }
+
+ .main-below {
+ 	margin-top: 20px;
+ }
+
+ .news-special-location {
+ 	border: 1px solid #b2b2b2;
+ 	display: inline-block;
+ 	height: 200px;
+ 	width: 300px;
+ }
+
+ footer {
+ 	border-top: 1px solid #b2b2b2;
+ }
+
+ .copyright {
+ 	font-family: 'Poiret One', cursive;
+ 	font-size: 12px;
+ 	margin: 25px 0px 40px 2px;
+ }
