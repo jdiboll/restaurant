@@ -1,3 +1,5 @@
+      import $ from 'jquery';
+
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('map'), {
@@ -5,3 +7,5 @@
           zoom: 8
         });
       }
+
+$('#map').append(map);
