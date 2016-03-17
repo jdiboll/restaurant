@@ -1,4 +1,3 @@
-      export default
       import $ from 'jquery';
 
       var map;
@@ -9,3 +8,4 @@
         });
       }
 
+$('#map').append(map);
