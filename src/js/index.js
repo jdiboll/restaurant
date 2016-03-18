@@ -79,8 +79,6 @@ $.ajax(url).then(function(data) {
 	});
 
 
-
-<<<<<<< HEAD
 // import $ from 'jquery';
 
 
@@ -132,7 +130,7 @@ $.ajax(url).then(function(data) {
 // 	var html = template(datum);
 // 	$app.append(html);
 // });
-=======
+
 
 
 
@@ -153,7 +151,7 @@ formArray.forEach(function(datum) {
 	var html = template(datum);
 	$reservation.append(html);
 });
->>>>>>> ef38a9a844ac4dfac891f69322dc57744b444af0
+ 
 
 // var $app = $('.app');
 
