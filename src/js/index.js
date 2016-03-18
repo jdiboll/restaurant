@@ -1,8 +1,8 @@
 import $ from 'jquery';
 
-<<<<<<< HEAD
+
 // import formArray from './template_for_forms';
-=======
+
 // import form_data from './template_for_forms';
 
 // import { lineOfText, commentSection, selectSeat } from './template_for_forms';
@@ -24,7 +24,7 @@ import $ from 'jquery';
 //	$app.append(html);
 //	return html;
 //});
->>>>>>> dcff76454e8e123c21281b88be018cd165e84a52
+
 
 import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
@@ -85,7 +85,7 @@ $.ajax(url).then(function(data) {
 
 // // 
 
-<<<<<<< HEAD
+
 var $reservation = $('.reservation');
 
 formArray.forEach(function(datum) {
@@ -100,7 +100,7 @@ formArray.forEach(function(datum) {
 	var html = template(datum);
 	$reservation.append(html);
 });
-=======
+
 // var $app = $('.app');
 
 // form_data.forEach(function(datum) {
@@ -115,7 +115,7 @@ formArray.forEach(function(datum) {
 // 	var html = template(datum);
 // 	$app.append(html);
 // });
->>>>>>> dcff76454e8e123c21281b88be018cd165e84a52
+
 
 
 
