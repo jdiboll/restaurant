@@ -38,7 +38,7 @@ header {
  .logo {
  	display: flex;
  	font-family: 'Poiret One', cursive;
- 	font-size: 50px;
+ 	font-size: 60px;
  	align-items: center;
  	margin: 0;
  	vertical-align: middle;
@@ -55,7 +55,7 @@ header {
 
  .fa {
  	color: #272822;
- 	font-size: 50px;
+ 	font-size: 35px;
  	&.fa-facebook-square {
  		&:hover {
  			color: #43609c;
@@ -102,7 +102,7 @@ header {
 }
 
  .news-special-map {
- 	background: white;
+ 	background: #F7F7F7;
  	border: 1px solid #b2b2b2;
  	display: inline-block;
  	height: 400px;
