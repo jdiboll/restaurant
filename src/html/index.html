@@ -52,6 +52,9 @@
 		  			Where Are Ye?
 		  		</div>
 		  		<div id="map">
+			  		115 Martin Luther King Jr Dr SW
+					Suite 400
+					Atlanta - Downtown, GA 30303
 		  		</div>
 			</li>
 		</ul>
@@ -59,20 +62,21 @@
 
 	<div class="main-below"> <!-- BUTTONS & CONTENT & IMAGES ON THE RIGHT -->
 		<div class="main-below-left">
-			<ul class="nav">
-				<li class="nav-btn" id="story">
+			<div class="nav">
+				<div class="nav-btn" id="story-show">
 					Story
-				</li>
-				<li class="nav-btn" id="menu">
+				</div>
+				<div class="nav-btn" id="menu-hide">
 					Menu
-				</li>
-				<li class="nav-btn" id="reserve">
+				</div>
+				<div class="nav-btn" id="reserve-hide">
 					Reservations
-				</li>
-				<li class="nav-btn" id="reviews">
+				</div>
+				<div class="nav-btn" id="reviews-hide">
 					Reviews
-				</li>
-			</ul>
+				</div>
+				<div class="nav-btn" id="blank-space"></div>
+			</div>
 			<div class="story">
 				<p>
 					In 2004, two friends, John and Joshua, were playing video games together on their back porch in Atlanta, GA.  After several hours of play, they sat back and reached into their refrigerator for a brew and a sandwich, only to come up short.  They didn’t want to stop gaming in order to get some grub, but they didn’t have a choice.
@@ -143,12 +147,34 @@
     });
 }
 </script>
-<script async defer
-	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap">
-</script>
 <script src="js/bundle.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap"
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap"
     async defer></script>
+     <script>
+	function initMap() {
+  		var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 33.751894, lng: -84.391327},
+      zoom: 8
+    });
+      marker = new google.maps.Marker({
+    map: map,
+    draggable: true,
+    animation: google.maps.Animation.DROP,
+    position: {lat: 33.751894, lng: -84.391327}
+  });
+  marker.addListener('click', toggleBounce);
+};
+
+function toggleBounce() {
+  if (marker.getAnimation() !== null) {
+    marker.setAnimation(null);
+  } else {
+    marker.setAnimation(google.maps.Animation.BOUNCE);
+  }
+}
+</script>
 
   <script src="js/bundle.js"></script>
 </body>
