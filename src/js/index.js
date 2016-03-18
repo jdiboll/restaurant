@@ -1,6 +1,30 @@
 import $ from 'jquery';
 
+<<<<<<< HEAD
 // import formArray from './template_for_forms';
+=======
+// import form_data from './template_for_forms';
+
+// import { lineOfText, commentSection, selectSeat } from './template_for_forms';
+
+// //need section of html that we'll put this in
+// //var $app = $('.app');
+
+// form_data.forEach(function(datum) {
+// 	var template;
+// 	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
+// 		template = lineOfText;
+// 	} else if (datum.type === "textarea") {
+// 		template = commentSection;
+// 	} else if (datum.type === "select") {
+// 		template = selectSeat;
+// 	}
+// 	var html = template(datum);
+//need html to place onto site
+//	$app.append(html);
+//	return html;
+//});
+>>>>>>> dcff76454e8e123c21281b88be018cd165e84a52
 
 import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
@@ -59,8 +83,9 @@ $.ajax(url).then(function(data) {
 
 
 
-// 
+// // 
 
+<<<<<<< HEAD
 var $reservation = $('.reservation');
 
 formArray.forEach(function(datum) {
@@ -75,6 +100,22 @@ formArray.forEach(function(datum) {
 	var html = template(datum);
 	$reservation.append(html);
 });
+=======
+// var $app = $('.app');
+
+// form_data.forEach(function(datum) {
+// 	var template;
+// 	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
+// 		template = lineOfText;
+// 	} else if (datum.type === "textarea") {
+// 		template = commentSection;
+// 	} else if (datum.type === "select") {
+// 		template = selectSeat;
+// 	}
+// 	var html = template(datum);
+// 	$app.append(html);
+// });
+>>>>>>> dcff76454e8e123c21281b88be018cd165e84a52
 
 
 
@@ -165,33 +206,33 @@ console.log('work more');
 
 // Function for the bottom copyright date.
 
-function nowSeconds() {
+// function nowSeconds() {
+// 	var today;
+// 	var currentSeconds;
+
+// 	today = new Date();
+// 	currentSeconds = today.getSeconds();
+
+// 	var copyrightSeconds = document.querySelector('.copyright')
+
+//  	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
+//  };
+
+//  var intID = window.setInterval(nowSeconds, 1000);
+
+
+
+function nowYear() {
 	var today;
-	var currentSeconds;
+	var currentYear;
 
 	today = new Date();
-	currentSeconds = today.getSeconds();
+	currentYear = today.getFullYear();
 
-	var copyrightSeconds = document.querySelector('.copyright')
+	var copyrightYear = document.querySelector('.copyright')
 
- 	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
+ 	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
  };
 
- var intID = window.setInterval(nowSeconds, 1000);
-
-
-
-// function nowYear() {
-	// var today;
-	// var currentYear;
-
-	// today = new Date();
-	// currentYear = today.getFullYear();
-
-	// var copyrightYear = document.querySelector('.copyright')
-
- // 	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
- // };
-
- // var intID = window.setInterval(nowYear, 1000);
+ var intID = window.setInterval(nowYear, 86400000);
 
