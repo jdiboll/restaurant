@@ -1,5 +1,8 @@
 import $ from 'jquery';
 
+
+// import formArray from './template_for_forms';
+
 // import form_data from './template_for_forms';
 
 // import { lineOfText, commentSection, selectSeat } from './template_for_forms';
@@ -22,6 +25,22 @@ import $ from 'jquery';
 //	return html;
 //});
 
+
+import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
+
+
+
+var url2 = 'https://json-data.herokuapp.com/restaurant/news/1';
+$.ajax(url2).then(function(data){
+	$('#news').append(`
+		<div class="news_wrapper">
+			<div class="news_title">${data.title}</div>
+			<div class="news_date">${data.date_published}</div>
+			<div class="news_post">${data.post}</div>
+		</div>
+		`);
+	console.log('work');
+});
 //-----------------------------------------------
 
 var url = 'https://json-data.herokuapp.com/restaurant/menu/3';
@@ -65,6 +84,22 @@ $.ajax(url).then(function(data) {
 
 
 // // 
+
+
+var $reservation = $('.reservation');
+
+formArray.forEach(function(datum) {
+	var template;
+	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
+		template = lineOfText;
+	} else if (datum.type === "textarea") {
+		template = commentSection;
+	} else if (datum.type === "select") {
+		template = selectSeat;
+	}
+	var html = template(datum);
+	$reservation.append(html);
+});
 
 // var $app = $('.app');
 
@@ -130,10 +165,58 @@ $.ajax(url).then(function(data) {
 
 
 
+$.ajax(url).then(function(data) {
+
+	// console.log(data);
+
+	var drinks = data.Beer;
+	// console.log(drinks);
+	var food = data.entrees;
+	// console.log(food);
+	var games = data.games;
 
 
+	// function todaySpecial () {
 
+	var mySpecial = "fucking things";
+	var today = new Date();
+	var dayOfWeek = today.getDay();
+	console.log(dayOfWeek);
 
+	if (dayOfWeek === 0) {
+		mySpecial = drinks[0];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 1) {
+		mySpecial = food[0];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 2) {
+		mySpecial === drinks[1];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 3) {
+		mySpecial = food[1];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 4) {
+		mySpecial = drinks[2];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 5) {
+		mySpecial = drinks[2];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 6) {
+		mySpecial = food[3];
+		console.log(mySpecial);
+	};
+
+	// return mySpecial;
+	// console.log('work more');
+
+	var foodSpecial = document.querySelector('#special');
+
+	foodSpecial.innerHTML = `<div class="specialName">${mySpecial.item}</div>
+		<div class="specialPrice">${mySpecial.price}</div>
+		<div class="specialDescrip">${mySpecial.description}</div>`;
+	
+// }
+});
 
 
 
@@ -168,4 +251,3 @@ function nowYear() {
  };
 
  var intID = window.setInterval(nowYear, 1000);
-

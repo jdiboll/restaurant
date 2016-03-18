@@ -1,40 +1,46 @@
-var formArray = [
-{	"type":"text",
+export var formArray = [
+{	
+	"type":"text",
       "label":"Full Name",
       "id":"user-full-name",
       "options":[  
 
       ]
 },
-{	"type":"text",
+{	
+	"type":"text",
       "label":"Number of Guests",
       "id":"num_guests",
       "options":[  
 
       ]
 },
-{	"type":"tel",
+{	
+	"type":"tel",
       "label":"Telephone Number",
       "id":"user-phone",
       "options":[  
 
       ]
 },
-{	"type":"date",
+{	
+	"type":"date",
       "label":"Reservation Date",
       "id":"date-request",
       "options":[  
 
       ]
 },
-{	"type":"email",
+{	
+	"type":"email",
       "label":"Email Address",
       "id":"user-email",
       "options":[  
 
       ]
 },
-{	"type":"text",
+{	
+	"type":"text",
       "label":"Subject",
       "id":"email-subject",
       "options":[  
@@ -49,7 +55,7 @@ var formArray = [
          {  
             "label":"Indoors",
             "value":"inside"
-         },
+        },
          {  
             "label":"Patio",
             "value":"outdoor"
@@ -70,9 +76,10 @@ var formArray = [
    },
 ];
 
+
+
 //GIVING ME ERROR of ParseError: 'import' and 'export' may appear only with 'sourceType: module'
-//export 
-function lineOfText(obj) {
+export function lineOfText(obj) {
 	return `
 	<label for="${obj.id}">     ${obj.label}     </label>
  		<input type="${obj.type}" 	id="${obj.id}">
@@ -80,8 +87,7 @@ function lineOfText(obj) {
  		`
  }
 
-//export 
-function commentSection(comment) {
+export function commentSection(comment) {
 	return `
 		<label for="${comment.id}"> ${comment.label}   </label>
 		<textarea type="textarea" id="${comment.id}">
@@ -89,8 +95,7 @@ function commentSection(comment) {
  		`
 };
 
-//export 
-function selectSeat(prefer){
+export function selectSeat(prefer){
 	var seatPref = prefer.options;
 	var prefHtml = seatPref.map (function(seat) {
 		return `<option value="${seat.value}">${seat}</option>`
