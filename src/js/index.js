@@ -139,33 +139,33 @@ $.ajax(url).then(function(data) {
 
 // Function for the bottom copyright date.
 
-function nowSeconds() {
+// function nowSeconds() {
+// 	var today;
+// 	var currentSeconds;
+
+// 	today = new Date();
+// 	currentSeconds = today.getSeconds();
+
+// 	var copyrightSeconds = document.querySelector('.copyright')
+
+//  	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
+//  };
+
+//  var intID = window.setInterval(nowSeconds, 1000);
+
+
+
+function nowYear() {
 	var today;
-	var currentSeconds;
+	var currentYear;
 
 	today = new Date();
-	currentSeconds = today.getSeconds();
+	currentYear = today.getFullYear();
 
-	var copyrightSeconds = document.querySelector('.copyright')
+	var copyrightYear = document.querySelector('.copyright')
 
- 	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
+ 	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
  };
 
- var intID = window.setInterval(nowSeconds, 1000);
-
-
-
-// function nowYear() {
-	// var today;
-	// var currentYear;
-
-	// today = new Date();
-	// currentYear = today.getFullYear();
-
-	// var copyrightYear = document.querySelector('.copyright')
-
- // 	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
- // };
-
- // var intID = window.setInterval(nowYear, 1000);
+ var intID = window.setInterval(nowYear, 1000);
 
