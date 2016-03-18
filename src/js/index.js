@@ -139,33 +139,33 @@ form_data.forEach(function(datum) {
 
 // Function for the bottom copyright date.
 
-//function nowSeconds() {
-	//var today;
-	//var currentSeconds;
+function nowSeconds() {
+	var today;
+	var currentSeconds;
 
-	//today = new Date();
-	//currentSeconds = today.getSeconds();
+	today = new Date();
+	currentSeconds = today.getSeconds();
 
-	//var copyrightSeconds = document.querySelector('.copyright')
+	var copyrightSeconds = document.querySelector('.copyright')
 
- 	//copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
- //};
+ 	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
+ };
 
- //var intID = window.setInterval(nowSeconds, 1000);
+ var intID = window.setInterval(nowSeconds, 1000);
 
-//
 
- function nowYear() {
-	 var today;
-	 var currentYear;
 
-	 today = new Date();
-	 currentYear = today.getFullYear();
+ //function nowYear() {
+	 //var today;
+	 //var currentYear;
 
-	 var copyrightYear = document.querySelector('.copyright')
+	 //today = new Date();
+	 //currentYear = today.getFullYear();
 
-  	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
-  };
+	 //var copyrightYear = document.querySelector('.copyright')
 
-  var intID = window.setInterval(nowYear, 1000);
+  	//copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
+  //};
+
+  //var intID = window.setInterval(nowYear, 1000);
 
