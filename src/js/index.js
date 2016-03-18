@@ -79,6 +79,10 @@ $.ajax(url).then(function(data) {
 	});
 
 
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 1eea130266937b62852cd8133014927e9bdd8705
 // import $ from 'jquery';
 
 
@@ -130,6 +134,11 @@ $.ajax(url).then(function(data) {
 // 	var html = template(datum);
 // 	$app.append(html);
 // });
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 1eea130266937b62852cd8133014927e9bdd8705
 
 
 
@@ -151,6 +160,11 @@ formArray.forEach(function(datum) {
 	var html = template(datum);
 	$reservation.append(html);
 });
+<<<<<<< HEAD
+=======
+ 
+ 
+>>>>>>> 1eea130266937b62852cd8133014927e9bdd8705
 
 
 // var $app = $('.app');
