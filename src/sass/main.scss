@@ -2,26 +2,10 @@
 
  @import 'font-awesome';
 
-<<<<<<< HEAD
 body {
  	background: #ebebeb;
  	margin: 0;
  }
-=======
-
- 
-
-
- 
- body {
- 	background: #ebebeb;
- 	margin: 0;
- }
- 
- 
-
- 
->>>>>>> 1eea130266937b62852cd8133014927e9bdd8705
 
  ul {
  	margin: 0;
@@ -131,6 +115,10 @@ header {
  		width: 90%;
  	}
  }
+
+#news {
+	overflow: scroll;
+}
 
 #map {
 	background-color: #CCC;
