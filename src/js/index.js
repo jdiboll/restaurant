@@ -167,5 +167,5 @@ function nowYear() {
  	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
  };
 
- var intID = window.setInterval(nowYear, 1000);
+ var intID = window.setInterval(nowYear, 86400000);
 
