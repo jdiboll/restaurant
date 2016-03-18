@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
- 
+
 // import formArray from './template_for_forms';
 
 // import form_data from './template_for_forms';
@@ -24,7 +24,7 @@ import $ from 'jquery';
 //	$app.append(html);
 //	return html;
 //});
- 
+
 
 import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
@@ -79,6 +79,7 @@ $.ajax(url).then(function(data) {
 	});
 
 
+<<<<<<< HEAD
 // import $ from 'jquery';
 
 
@@ -130,13 +131,15 @@ $.ajax(url).then(function(data) {
 // 	var html = template(datum);
 // 	$app.append(html);
 // });
+=======
+>>>>>>> 19909fafd57b340478d078501dfc91f0711ff0d8
 
 
 
 
 // // 
 
- 
+
 var $reservation = $('.reservation');
 
 formArray.forEach(function(datum) {
@@ -151,7 +154,10 @@ formArray.forEach(function(datum) {
 	var html = template(datum);
 	$reservation.append(html);
 });
+<<<<<<< HEAD
  
+=======
+>>>>>>> 19909fafd57b340478d078501dfc91f0711ff0d8
 
 // var $app = $('.app');
 
@@ -167,7 +173,7 @@ formArray.forEach(function(datum) {
 // 	var html = template(datum);
 // 	$app.append(html);
 // });
- 
+
 
 
 
@@ -274,37 +280,6 @@ $.ajax(url).then(function(data) {
 
 // Function for the bottom copyright date.
 
- 
-function nowSeconds() {
-	var today;
-	var currentSeconds;
-
-	today = new Date();
-	currentSeconds = today.getSeconds();
-
-	var copyrightSeconds = document.querySelector('.copyright')
-
- 	copyrightSeconds.innerHTML = `&copy; ${currentSeconds} Ye Olde.`;
- };
-
- var intID = window.setInterval(nowSeconds, 1000);
-
-
-
- //function nowYear() {
-	 //var today;
-	 //var currentYear;
-
-	 //today = new Date();
-	 //currentYear = today.getFullYear();
-
-	 //var copyrightYear = document.querySelector('.copyright')
-
-  	//copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
-  //};
-
-  //var intID = window.setInterval(nowYear, 1000);
-
 // function nowSeconds() {
 // 	var today;
 // 	var currentSeconds;
@@ -334,5 +309,3 @@ function nowYear() {
  };
 
  var intID = window.setInterval(nowYear, 86400000);
-
-
