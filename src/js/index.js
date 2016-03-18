@@ -167,40 +167,56 @@ formArray.forEach(function(datum) {
 
 $.ajax(url).then(function(data) {
 
+	// console.log(data);
+
 	var drinks = data.Beer;
+	// console.log(drinks);
 	var food = data.entrees;
+	// console.log(food);
 	var games = data.games;
 
 
-	function todaySpecial () {
+	// function todaySpecial () {
 
-		var today = new Date();
-		var dayOfWeek = today.getDay();
+	var mySpecial = "fucking things";
+	var today = new Date();
+	var dayOfWeek = today.getDay();
+	console.log(dayOfWeek);
 
-		if (dayOfWeek === 0) {
-			todaySpecial = drinks[0];
-		} else if (dayOfWeek === 1) {
-			todaySpecial = food[0];
-		} else if (dayOfWeek === 2) {
-			todaySpecial === drinks[1];
-		} else if (dayOfWeek === 3) {
-			todaySpecial = food[1];
-		} else if (dayOfWeek === 4) {
-			todaySpecial = drinks[2];
-		} else if (dayOfWeek === 5) {
-			todaySpecial = drinks[2];
-		} else if (dayOfWeek === 6) {
-			todaySpecial = food[3];
-		};
-console.log('work more');
+	if (dayOfWeek === 0) {
+		mySpecial = drinks[0];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 1) {
+		mySpecial = food[0];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 2) {
+		mySpecial === drinks[1];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 3) {
+		mySpecial = food[1];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 4) {
+		mySpecial = drinks[2];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 5) {
+		mySpecial = drinks[2];
+		console.log(mySpecial);
+	} else if (dayOfWeek === 6) {
+		mySpecial = food[3];
+		console.log(mySpecial);
+	};
 
-	var foodSpecial = document.querySelector('.today_special');
+	// return mySpecial;
+	// console.log('work more');
 
-	foodSpecial.innerHTML = `<div class="specialName">${drinks.item}</div>
-		<div class="specialPrice">${drinks.price}</div>
-		<div class="specialDescrip">${drinks.description}</div>`;
+	var foodSpecial = document.querySelector('#special');
+
+	foodSpecial.innerHTML = `<div class="specialName">${mySpecial.item}</div>
+		<div class="specialPrice">${mySpecial.price}</div>
+		<div class="specialDescrip">${mySpecial.description}</div>`;
 	
-}});
+// }
+});
 
 
 
