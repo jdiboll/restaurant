@@ -105,20 +105,31 @@ header {
  	background: #F7F7F7;
  	border: 1px solid #b2b2b2;
  	display: inline-block;
- 	height: 400px;
+ 	font-family: Arial;
+ 	font-size: 14px;
+ 	height: 322px;
+ 	overflow: scroll;
  	vertical-align: top;
  	width: 300px;
  	.box-header {
  		border-bottom: 1px solid #b2b2b2;
+ 		font-family: 'Poiret One', cursive;
+ 		font-size: 30px;
  		margin: 14px auto 0px auto;
  		padding: 0px 0px 8px 0px;
  		width: 90%;
  	}
  }
 
-#news {
-	overflow: scroll;
-}
+ .box-content {
+    margin: 10px auto 10px auto;
+    width: 90%;
+ }
+
+ #thumbs-up {
+ 	// background: #fefefc;
+ 	text-align: center;
+ }
 
 #map {
 	background-color: #CCC;
@@ -126,6 +137,15 @@ header {
     height: 200px;
     margin: 10px auto 10px auto;
     width: 90%;
+  }
+
+  #atl-phone {
+  	display: flex;
+  	justify-content: space-between;
+  	#blue-phone {
+  		font-weight: bold;
+  		color: #0077CC;
+  	}
   }
 
 // MAIN-BELOW  // MAIN-BELOW  // MAIN-BELOW
