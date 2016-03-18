@@ -206,7 +206,7 @@ console.log('work more');
 
 // Function for the bottom copyright date.
 
-<<<<<<< HEAD
+ 
 function nowSeconds() {
 	var today;
 	var currentSeconds;
@@ -236,7 +236,7 @@ function nowSeconds() {
   //};
 
   //var intID = window.setInterval(nowYear, 1000);
-=======
+
 // function nowSeconds() {
 // 	var today;
 // 	var currentSeconds;
@@ -266,5 +266,5 @@ function nowYear() {
  };
 
  var intID = window.setInterval(nowYear, 86400000);
->>>>>>> d568c19ce86ee4a2e4d4d2247a0dc9753744203d
+
 
