@@ -42,7 +42,7 @@
 			</li>
 			<li class="news-special-map special-header">
 		  		<div class="box-header" id="news-header">
-		  			Ye Special o' the Day<img src="http://thestoryscape.com/wp-content/uploads/2014/08/bill-cosby-so-good.gif" />
+		  			Ye Special o' the Day
 		  		</div>
 		  		<div id="special">
 		  		</div>
@@ -137,7 +137,6 @@
   </footer> <!-- END OF FOOTER -->
 
 </div>  <!-- END OF "APP" WRAPPING DIV -->
-
  <script>
 	function initMap() {
   		var map;
@@ -162,35 +161,11 @@ function toggleBounce() {
   }
 }
 </script>
-<script src="js/bundle.js"></script>
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap"
     async defer></script>
-     <script>
-	function initMap() {
-  		var map;
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: {lat: 33.751894, lng: -84.391327},
-      zoom: 8
-    });
-      marker = new google.maps.Marker({
-    map: map,
-    draggable: true,
-    animation: google.maps.Animation.DROP,
-    position: {lat: 33.751894, lng: -84.391327}
-  });
-  marker.addListener('click', toggleBounce);
-};
-
-function toggleBounce() {
-  if (marker.getAnimation() !== null) {
-    marker.setAnimation(null);
-  } else {
-    marker.setAnimation(google.maps.Animation.BOUNCE);
-  }
-}
-</script>
 
   <script src="js/bundle.js"></script>
+ 
 </body>
 </html>
