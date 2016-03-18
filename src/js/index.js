@@ -1,27 +1,22 @@
 import $ from 'jquery';
 
-import form_data from './template_for_forms';
+// import formArray from './template_for_forms';
 
-import { lineOfText, commentSection, selectSeat } from './template_for_forms';
+import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
-// //need section of html that we'll put this in
-// //var $app = $('.app');
 
-// form_data.forEach(function(datum) {
-// 	var template;
-// 	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
-// 		template = lineOfText;
-// 	} else if (datum.type === "textarea") {
-// 		template = commentSection;
-// 	} else if (datum.type === "select") {
-// 		template = selectSeat;
-// 	}
-// 	var html = template(datum);
-//need html to place onto site
-//	$app.append(html);
-//	return html;
-//});
 
+var url2 = 'https://json-data.herokuapp.com/restaurant/news/1';
+$.ajax(url2).then(function(data){
+	$('#news').append(`
+		<div class="news_wrapper">
+			<div class="news_title">${data.title}</div>
+			<div class="news_date">${data.date_published}</div>
+			<div class="news_post">${data.post}</div>
+		</div>
+		`);
+	console.log('work');
+});
 //-----------------------------------------------
 
 var url = 'https://json-data.herokuapp.com/restaurant/menu/3';
@@ -66,9 +61,9 @@ $.ajax(url).then(function(data) {
 
 // 
 
-var $app = $('.app');
+var $reservation = $('.reservation');
 
-form_data.forEach(function(datum) {
+formArray.forEach(function(datum) {
 	var template;
 	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
 		template = lineOfText;
@@ -78,7 +73,7 @@ form_data.forEach(function(datum) {
 		template = selectSeat;
 	}
 	var html = template(datum);
-	$app.append(html);
+	$reservation.append(html);
 });
 
 
@@ -129,11 +124,42 @@ form_data.forEach(function(datum) {
 
 
 
+$.ajax(url).then(function(data) {
+
+	var drinks = data.Beer;
+	var food = data.entrees;
+	var games = data.games;
 
 
+	function todaySpecial () {
 
+		var today = new Date();
+		var dayOfWeek = today.getDay();
 
+		if (dayOfWeek === 0) {
+			todaySpecial = drinks[0];
+		} else if (dayOfWeek === 1) {
+			todaySpecial = food[0];
+		} else if (dayOfWeek === 2) {
+			todaySpecial === drinks[1];
+		} else if (dayOfWeek === 3) {
+			todaySpecial = food[1];
+		} else if (dayOfWeek === 4) {
+			todaySpecial = drinks[2];
+		} else if (dayOfWeek === 5) {
+			todaySpecial = drinks[2];
+		} else if (dayOfWeek === 6) {
+			todaySpecial = food[3];
+		};
+console.log('work more');
 
+	var foodSpecial = document.querySelector('.today_special');
+
+	foodSpecial.innerHTML = `<div class="specialName">${drinks.item}</div>
+		<div class="specialPrice">${drinks.price}</div>
+		<div class="specialDescrip">${drinks.description}</div>`;
+	
+}});
 
 
 
