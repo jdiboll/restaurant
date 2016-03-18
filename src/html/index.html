@@ -12,63 +12,127 @@
 <div id="news"></div>
 
 <header> <!-- START OF HEADER -->
-		<h3 class="logo">Ye Olde</h3>
-		<div class="social_media"> <!-- ICONS ICONS ICONS -->
-			<a href="www.facebook.com">
-				<i class="fa fa-facebook-square"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-twitter-square"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-instagram"></i>
-			</a>
-			<a href="www.facebook.com">
-				<i class="fa fa-yelp"></i>
-			</a>
-		<!-- PLACEHOLDER FOR OPENTABLE ICON -->
-		 		</div>
+	<h3 class="logo">Ye Olde</h3>
+	<div class="social-media"> <!-- ICONS ICONS ICONS -->
+		<a class="social-a" href="www.facebook.com">
+			<i class="fa fa-facebook-square"></i>
+		</a>
+		<a class="social-a" href="www.twitter.com">
+			<i class="fa fa-twitter-square"></i>
+		</a>
+		<a class="social-a" href="www.instagram.com">
+			<i class="fa fa-instagram"></i>
+		</a>
+		<a class="social-a" href="www.yelp.com">
+			<i class="fa fa-yelp"></i>
+		</a>
+	<!-- PLACEHOLDER FOR OPENTABLE ICON -->
+	 </div>
 
 </header> <!-- END OF HEADER -->
 
+<<<<<<< HEAD
 <div id="map"></div>
+=======
+<div id="news"></div>
+<div class="today_special"></div>
+>>>>>>> ef38a9a844ac4dfac891f69322dc57744b444af0
 
 <div class="main"> <!-- START OF MAIN DIV -->
 	<div class="main-above"> <!-- NEWS & SPECIAL & LOCATION -->
-		<ul>
-			<li class="news-special-location">
-		
+		<img id="gyro" src="../images/3969427384_0531f66282_o.jpg" alt="Ye Olde on a typical night" title="Ye Olde on a typical night">
+		<ul class="blocks">
+			<li class="news-special-map">
+				<div class="box-header" id="news-header">
+					Ye Olde News
+		  		</div>
+		  		<div id="news">
+		  		</div>
 			</li>
-			<li class="news-special-location special-header">
-		  			
+			<li class="news-special-map special-header">
+		  		<div class="box-header" id="news-header">
+		  			Ye Special o' the Day
+		  		</div>
+		  		<div id="special">
+		  		</div>
 			</li>
-			<li class="news-special-location">
-		  			
+			<li class="news-special-map">
+		  		<div class="box-header" id="news-header">
+		  			Where Are Ye?
+		  		</div>
+		  		<div id="map">
+		  		</div>
 			</li>
 		</ul>
 	</div> <!-- END OF NEWS & SPECIAL & LOCATION -->
 
 	<div class="main-below"> <!-- BUTTONS & CONTENT & IMAGES ON THE RIGHT -->
 		<div class="main-below-left">
-			
+ 
+			<div class="reservation"> </div>
+
+			<ul class="nav">
+				<li class="nav-btn" id="story">
+					Story
+				</li>
+				<li class="nav-btn" id="menu">
+					Menu
+				</li>
+				<li class="nav-btn" id="reserve">
+					Reservations
+				</li>
+				<li class="nav-btn" id="reviews">
+					Reviews
+				</li>
+			</ul>
+			<div class="story">
+				<p>
+					In 2004, two friends, John and Joshua, were playing video games together on their back porch in Atlanta, GA.  After several hours of play, they sat back and reached into their refrigerator for a brew and a sandwich, only to come up short.  They didn’t want to stop gaming in order to get some grub, but they didn’t have a choice.
+				</p>
+				<p>
+					“Wouldn’t it be great to get some food and continue to play at the same place?” asked John.  Joshua agreed. And the concept for “Ye Olde” was born.  It wasn’t until the year 2005 that they were able to see their plans materialize.
+				</p>
+				<img id="story-image" src="../images/1683739679_a02caff951_z.jpg" alt="Friends having a good time at Ye Olde" title="Friends having a good time at Ye Olde">
+				<p>
+					“Ye Olde” opened their doors on March 1, 2005 to positive reviews.  With a warm and welcoming atmosphere, classic British pub-style grub, and a selection of delicious and unique beer choices, “Ye Olde” is popular with young and old alike.  It rocketed into the spotlight when it hosted events for the popular gaming convention MomoCon in 2006.
+				</p>
+				<p>
+					In 2011, John and Joshua opened a second pub, called “Ye New” at the Atlanta Perimeter.
+				</p>
+
+			</div>
+
+			<div class="menu">
+				
+			</div>
+
+			<div class="reserve">
+				
+			</div>
+
+			<div class="reviews">
+				
+			</div>
+
+
 		</div>
 
 		<div class=main-below-right>
 			<ul>
 				<li>
-					<img src="">
+					<img class="side-image" src="../images/14923250915_a0beb4ebfc_m.jpg" alt="Founders KBS" title="Founders KBS">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="../images/15921544330_9176b15b9e_m.jpg" alt="Founder Breakfast Stout" title="Founder Breakfast Stout">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="../images/4365365062_1c06b903e9_m.jpg" alt="Franziskaner Dunkel" title="Franziskaner Dunkel">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="../images/4448435974_65eea4220f_o.jpg" alt="Beer is life. Life is beer." title="Beer is life. Life is beer.">
 				</li>
 				<li>
-					<img src="">
+					<img class="side-image" src="../images/15677061941_185009cd80_m.jpg" alt="Great beer pairs well with great food." title="Great beer pairs well with great food.">
 				</li>
 			</ul>
 		</div>
@@ -83,6 +147,29 @@
 
 </div>  <!-- END OF "APP" WRAPPING DIV -->
 
+<<<<<<< HEAD
+=======
+
+
+
+ <script>
+	function initMap() {
+  		var map;
+    map = new google.maps.Map(document.getElementById('map'), {
+      center: {lat: 33.751894, lng: -84.391327},
+      zoom: 8
+    });
+}
+</script>
+<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap">
+</script>
+<script src="js/bundle.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjVCeePTaPBII9oizxUoAayJwjetZO45g&callback=initMap"
+    async defer></script>
+
+
+>>>>>>> ef38a9a844ac4dfac891f69322dc57744b444af0
   <script src="js/bundle.js"></script>
 </body>
 </html>
