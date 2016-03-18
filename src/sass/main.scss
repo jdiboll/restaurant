@@ -2,7 +2,7 @@
 
  @import 'font-awesome';
 
- body {
+body {
  	background: #ebebeb;
  	margin: 0;
  }
@@ -40,7 +40,7 @@ header {
  	font-family: 'Poiret One', cursive;
  	font-size: 60px;
  	align-items: center;
- 	margin: 0;
+ 	margin: 0px 0px 6px 0px;
  	vertical-align: middle;
  }
 
@@ -68,7 +68,7 @@ header {
  	}
  	&.fa-instagram {
  		&:hover {
- 			color: #365985;
+ 			color: #ad836c;
  		}
  	}
  	&.fa-yelp {
@@ -116,6 +116,10 @@ header {
  	}
  }
 
+#news {
+	overflow: scroll;
+}
+
 #map {
 	background-color: #CCC;
     border: 1px solid #b2b2b2;
@@ -139,11 +143,78 @@ header {
 	width: 60%;
 }
 
+.nav {
+	font-size: 0px;
+}
+
 .nav-btn {
 	display: inline-block;
 	font-family: 'Poiret One', cursive;
 	font-size: 30px;
-	margin: 10px 15px 5px 0px;
+	margin: 0;
+	padding: 5px 10px 5px 10px;
+	&#story-show {
+		border-top: 1px solid #b2b2b2;
+		border-left: 1px solid #b2b2b2;
+		border-right: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#story-hide {
+		border-bottom: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#menu-hide {
+		border-bottom: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#menu-show {
+		border-top: 1px solid #b2b2b2;
+		border-left: 1px solid #b2b2b2;
+		border-right: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#reserve-hide {
+		border-bottom: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#reserve-show {
+		border-top: 1px solid #b2b2b2;
+		border-left: 1px solid #b2b2b2;
+		border-right: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#reviews-hide {
+		border-bottom: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#reviews-show {
+		border-top: 1px solid #b2b2b2;
+		border-left: 1px solid #b2b2b2;
+		border-right: 1px solid #b2b2b2;
+		&:hover {
+			background: #F7F7F7;
+		}
+	}
+	&#blank-space {
+		border-bottom: 1px solid #b2b2b2;
+		height: 2px;
+		vertical-align: bottom;
+		width: 90px;
+	}
 }
 
 #story-image {
