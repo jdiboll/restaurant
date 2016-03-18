@@ -200,10 +200,6 @@ formArray.forEach(function(datum) {
 	$reservation.append(html);
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> e403daf067aa3f9407cc3e044941c1e75fe03ca2
 // var $app = $('.app');
 
 // form_data.forEach(function(datum) {
