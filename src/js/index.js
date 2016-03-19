@@ -26,7 +26,7 @@ import $ from 'jquery';
 //});
 
 
-import { formArray, lineOfText, commentSection, selectSeat } from './template_for_forms';
+import { formArray, formReviews, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
 
 
@@ -185,11 +185,11 @@ $.ajax(url).then(function(data) {
 // // 
 
 
-var $reservation = $('.reservation');
+var $reservation = $('.reserve');
 
 formArray.forEach(function(datum) {
 	var template;
-	if (datum.type === "text" || datum.type === "email" || datum.type === "tel" || datum.type === "date") {
+	if (datum.type === "text" || datum.type === "tel" || datum.type === "date") {
 		template = lineOfText;
 	} else if (datum.type === "textarea") {
 		template = commentSection;
@@ -200,10 +200,23 @@ formArray.forEach(function(datum) {
 	$reservation.append(html);
 });
 
-<<<<<<< HEAD
-=======
 
->>>>>>> e403daf067aa3f9407cc3e044941c1e75fe03ca2
+var $reviews = $('.reviews');
+
+formReviews.forEach(function(input) {
+	var templater;
+	if (input.type === "text" || input.type === "email") {
+		templater = lineOfText;
+	} else if (input.type === "textarea") {
+		templater = commentSection;
+	} 
+
+	var html_2 = templater(input);
+	$reviews.append(html_2);
+});
+
+
+
 // var $app = $('.app');
 
 // form_data.forEach(function(datum) {

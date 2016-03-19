@@ -31,23 +31,7 @@ export var formArray = [
 
       ]
 },
-{	
-	"type":"email",
-      "label":"Email Address",
-      "id":"user-email",
-      "options":[  
-
-      ]
-},
-{	
-	"type":"text",
-      "label":"Subject",
-      "id":"email-subject",
-      "options":[  
-
-      ]
-},
- {  
+{  
       "type":"select",
       "label":"Seating Preference",
       "id":"user-seat-preference",
@@ -55,7 +39,7 @@ export var formArray = [
          {  
             "label":"Indoors",
             "value":"inside"
-        },
+         },
          {  
             "label":"Patio",
             "value":"outdoor"
@@ -65,7 +49,43 @@ export var formArray = [
             "value":"none"
          }
       ]
-   },
+},
+{  
+      "type":"textarea",
+      "label":"Comments",
+      "id":"user-comment",
+      "options":[  
+
+      ]
+},
+];
+
+
+export var formReviews = [
+{  
+      "type":"text",
+      "label":"Full Name",
+      "id":"user-full-name",
+      "options":[  
+
+      ]
+},
+{  
+      "type":"email",
+      "label":"Email Address",
+      "id":"user-email",
+      "options":[  
+
+      ]
+},
+{  
+      "type":"text",
+      "label":"Subject",
+      "id":"email-subject",
+      "options":[  
+
+      ]
+},
    {  
       "type":"textarea",
       "label":"Comments",
@@ -73,8 +93,9 @@ export var formArray = [
       "options":[  
 
       ]
-   },
+},
 ];
+
 
 
 
@@ -104,7 +125,7 @@ export function selectSeat(prefer){
 	prefHtml = prefHtml.join('');
 
 	return `
-	 	<label for="${prefer.id}">${prefer.id}     </label>
+	 	<label for="${prefer.id}">${prefer.label}     </label>
 	 	<select id="${prefer.id}"> 
  			<option value="none">No Preference</Option>
  			<option value="inside">Indoors</Option>
