@@ -63,19 +63,19 @@ $.ajax(url).then(function(data) {
 			`)
 		if (datum.allergies > 0) {
 			$('.menu').append(`
-				<i class="fa fa-exclamation-circle" title="Allergy Info" alt="Allergy Info"></i>`
+				<i class="fa fa-exclamation-circle" id="exclamation" title="Allergy Info" alt="Allergy Info"></i>`
 		)};
 		if (datum.favorite > 0) {
 			$('.menu').append(`
-				<i class="fa fa-star" title="Favorites" alt="Favorites"></i>`
+				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.bottle > 0) {
 			$('.menu').append(`
-				<i class="fa fa-cog" title="Comes in bottle" alt="Comes in bottle"></i>`
+				<i class="fa fa-cog" id="bottleDrink" title="Comes in bottle" alt="Comes in bottle"></i>`
 		)};
 		if (datum.draught > 0) {
 			$('.menu').append(`
-				<i class="fa fa-beer" title="Comes in draught" alt="Comes in draught"></i>`
+				<i class="fa fa-beer" id="draughtDrink" title="Comes in draught" alt="Comes in draught"></i>`
 		)};
 	});
 
@@ -87,19 +87,19 @@ $.ajax(url).then(function(data) {
 			`)
 		if (datum.allergies > 0) {
 			$('.menu').append(`
-				<i class="fa fa-exclamation-circle" title="Allergy Info" alt="Allergy Info"></i>`
+				<i class="fa fa-exclamation-circle" id="exclamation" title="Allergy Info" alt="Allergy Info"></i>`
 		)};
 		if (datum.favorite > 0) {
 			$('.menu').append(`
-				<i class="fa fa-star" title="Favorites" alt="Favorites"></i>`
+				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.spicy > 0) {
 			$('.menu').append(`
-				<i class="fa fa-fire" title="Is spicy" alt="Is spicy"></i>`
+				<i class="fa fa-fire" id="spicyFood" title="Is spicy" alt="Is spicy"></i>`
 		)};
 		if (datum.vegan > 0) {
 			$('.menu').append(`
-				<i class="fa fa-leaf" title="Vegan Friendly" alt="Vegan Friendly"></i>`
+				<i class="fa fa-leaf" id="veganFood" title="Vegan Friendly" alt="Vegan Friendly"></i>`
 		)};
 	});
 
@@ -113,15 +113,15 @@ $.ajax(url).then(function(data) {
 			`)
 		if (datum.favorite > 0) {
 			$('.menu').append(`
-				<i class="fa fa-star" title="Favorites" alt="Favorites"></i>`
+				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.online > 0) {
 			$('.menu').append(`
-				<i class="fa fa-wifi" title="Has online capability" alt="Has online capability"></i>`
+				<i class="fa fa-wifi" id="onlineGame" title="Has online capability" alt="Has online capability"></i>`
 		)};
 		if (datum.multiplayer > 0) {
 			$('.menu').append(`
-				<i class="fa fa-gamepad" title="Has Multiplayer" alt="Has Multiplayer"></i>`
+				<i class="fa fa-gamepad" id="multiGame" title="Has Multiplayer" alt="Has Multiplayer"></i>`
 			)};
 		});
 	});
