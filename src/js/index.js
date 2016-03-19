@@ -200,6 +200,7 @@ formArray.forEach(function(datum) {
 	$reservation.append(html);
 });
 
+<<<<<<< HEAD
 
 var $reviews = $('.reviews');
 
@@ -217,6 +218,8 @@ formReviews.forEach(function(input) {
 
 
 
+=======
+>>>>>>> cb53cf0e4ac64e046eb59a7d5342730701850b27
 // var $app = $('.app');
 
 // form_data.forEach(function(datum) {
