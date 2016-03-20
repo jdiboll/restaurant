@@ -173,7 +173,7 @@ header {
 	font-size: 30px;
 	margin: 0;
 	padding: 5px 10px 5px 10px;
-	&.story-show {
+	&.story-btn-show {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
@@ -181,19 +181,19 @@ header {
 			background: #F7F7F7;
 		}
 	}
-	&.story-hide {
+	&.story-btn-hide {
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.menu-hide {
+	&.menu-btn-hide {
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.menu-show {
+	&.menu-btn-show {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
@@ -201,13 +201,13 @@ header {
 			background: #F7F7F7;
 		}
 	}
-	&.reserve-hide {
+	&.reserve-btn-hide {
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reserve-show {
+	&.reserve-btn-show {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
@@ -215,13 +215,13 @@ header {
 			background: #F7F7F7;
 		}
 	}
-	&.reviews-hide {
+	&.reviews-btn-hide {
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reviews-show {
+	&.reviews-btn-show {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
