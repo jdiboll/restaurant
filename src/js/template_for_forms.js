@@ -52,7 +52,7 @@ export var formArray = [
 },
 {  
       "type":"textarea",
-      "label":"Comments",
+      "label":"Comments:",
       "id":"user-comment",
       "options":[  
 
@@ -88,7 +88,7 @@ export var formReviews = [
 },
    {  
       "type":"textarea",
-      "label":"Comments",
+      "label":"We welcome your feedback:",
       "id":"user-comment",
       "options":[  
 
@@ -110,28 +110,27 @@ export function lineOfText(obj) {
 
 export function commentSection(comment) {
 	return `
-		<label for="${comment.id}"> ${comment.label}   </label>
+		<label for="${comment.id}">    ${comment.label}   </label>
 		<textarea type="textarea" id="${comment.id}">
- 		<br>
  		`
 };
 
 export function selectSeat(prefer){
 	var seatPref = prefer.options;
 	var prefHtml = seatPref.map (function(seat) {
-		return `<option value="${seat.value}">${seat}</option>`
+		return `<option value="${seat.value}">    ${seat}    </option>`
 	});	
 
 	prefHtml = prefHtml.join('');
 
 	return `
-	 	<label for="${prefer.id}">${prefer.label}     </label>
+	 	<label for="${prefer.id}">     ${prefer.label}     </label>
 	 	<select id="${prefer.id}"> 
- 			<option value="none">No Preference</Option>
- 			<option value="inside">Indoors</Option>
- 			<option value="outdoor">Patio</Option>
+ 			<option value="none" class="opt">No Preference</Option>
+ 			<option value="inside" class="opt">Indoors</Option>
+ 			<option value="outdoor" class="opt">Patio</Option>
  		</select>
- 		<br>
+      <br>
  	`
 };
 
