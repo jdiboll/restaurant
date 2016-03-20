@@ -26,8 +26,7 @@ import $ from 'jquery';
 //});
 
 
-
-
+// News
 
 import { formArray, formReviews, lineOfText, commentSection, selectSeat } from './template_for_forms';
 
@@ -37,8 +36,10 @@ var url2 = 'https://json-data.herokuapp.com/restaurant/news/1';
 $.ajax(url2).then(function(data){
 	$('#news').append(`
 		<div class="news_wrapper">
-			<div class="news_title">${data.title}</div>
 			<div class="news_date">${data.date_published}</div>
+			<br />
+			<div class="news_title">${data.title}</div>
+			<br />
 			<div class="news_post">${data.post}</div>
 		</div>
 		`);
@@ -57,73 +58,90 @@ $.ajax(url).then(function(data) {
 
 	drinks.forEach(function(datum){
 
-		$('.menu').append(`
-			<div class="nameBeer"> ${datum.item} </div>
-			<div class="priceBeer"> ${datum.price} </div>
+		$('.beer').append(`
+			<br />
+			<br />
+			<div class="beer-top">
+				<div class="nameBeer"> ${datum.item} </div>
+				<div class="priceBeer"> $${datum.price} </div>
+			</div>
+			<div class="beer-bottom">
+				<div class="styleBeer">${datum.style} </div>
+				<div class="alcohol_content"> ${datum.abv}% ABV </div>
+			</div>
 			<div class="descripBeer"> ${datum.description} </div>
-			<div class="styleBeer">${datum.style} </div>
-			<div class="alcohol_content"> ${datum.abv} </div>
 			`)
 		if (datum.allergies > 0) {
-			$('.menu').append(`
+			$('.beer').append(`
 				<i class="fa fa-exclamation-circle" id="exclamation" title="Allergy Info" alt="Allergy Info"></i>`
 		)};
 		if (datum.favorite > 0) {
-			$('.menu').append(`
+			$('.beer').append(`
 				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.bottle > 0) {
-			$('.menu').append(`
+			$('.beer').append(`
 				<i class="fa fa-cog" id="bottleDrink" title="Comes in bottle" alt="Comes in bottle"></i>`
 		)};
 		if (datum.draught > 0) {
-			$('.menu').append(`
+			$('.beer').append(`
 				<i class="fa fa-beer" id="draughtDrink" title="Comes in draught" alt="Comes in draught"></i>`
 		)};
 	});
 
 	food.forEach(function(datum){
-		$('.menu').append(`
-			<div class="nameFood"> ${datum.item} </div>
-			<div class="priceFood"> ${datum.price} </div>
+		$('.food').append(`
+			<br />
+			<br />
+			<div class="food-top">
+				<div class="nameFood"> ${datum.item} </div>
+				<div class="priceFood"> $${datum.price} </div>
+			</div>
 			<div class="descripFood"> ${datum.description} </div>
 			`)
 		if (datum.allergies > 0) {
-			$('.menu').append(`
+			$('.food').append(`
 				<i class="fa fa-exclamation-circle" id="exclamation" title="Allergy Info" alt="Allergy Info"></i>`
 		)};
 		if (datum.favorite > 0) {
-			$('.menu').append(`
+			$('.food').append(`
 				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.spicy > 0) {
-			$('.menu').append(`
+			$('.food').append(`
 				<i class="fa fa-fire" id="spicyFood" title="Is spicy" alt="Is spicy"></i>`
 		)};
 		if (datum.vegan > 0) {
-			$('.menu').append(`
+			$('.food').append(`
 				<i class="fa fa-leaf" id="veganFood" title="Vegan Friendly" alt="Vegan Friendly"></i>`
 		)};
 	});
 
 	games.forEach(function(datum){
-		$('.menu').append(`
-			<div class="nameGame"> ${datum.item} </div>
-			<div class="priceGame"> ${datum.price} </div>
-			<div class="platformGame">${datum.platform} </div>
+		$('.games').append(`
+			<br />
+			<br />
+			<div class="game-top">	
+				<div class="game-left">
+					<div class="nameGame"> ${datum.item} | ${datum.platform}</div>
+				</div>
+				<div class="game-right">
+					<div class="priceGame"> $${datum.price} | ${datum.rating}</div>
+				</div>
+			</div>
 			<div class="descripGame"> ${datum.description} </div>
-			<div class="rateGame"> ${datum.rating}</div>
+			
 			`)
 		if (datum.favorite > 0) {
-			$('.menu').append(`
+			$('.games').append(`
 				<i class="fa fa-star" id="favItem" title="Favorites" alt="Favorites"></i>`
 		)};
 		if (datum.online > 0) {
-			$('.menu').append(`
+			$('.games').append(`
 				<i class="fa fa-wifi" id="onlineGame" title="Has online capability" alt="Has online capability"></i>`
 		)};
 		if (datum.multiplayer > 0) {
-			$('.menu').append(`
+			$('.games').append(`
 				<i class="fa fa-gamepad" id="multiGame" title="Has Multiplayer" alt="Has Multiplayer"></i>`
 			)};
 		});
@@ -332,8 +350,12 @@ $.ajax(url).then(function(data) {
 
 	var foodSpecial = document.querySelector('#special');
 
-	foodSpecial.innerHTML = `<div class="specialName">${mySpecial.item}</div>
-		<div class="specialPrice">${mySpecial.price}</div>
+	foodSpecial.innerHTML = `
+		<div class="special-name-price">
+			<div class="specialName">${mySpecial.item}</div>
+			<div class="specialPrice">$${mySpecial.price}</div>
+		</div>
+		<br />
 		<div class="specialDescrip">${mySpecial.description}</div>`;
 	
 // }
@@ -371,7 +393,7 @@ function nowYear() {
  	copyrightYear.innerHTML = `&copy; ${currentYear} Ye Olde.`;
  };
 
- var intID = window.setInterval(nowYear, 1000);
+ var copyID = window.setInterval(nowYear, 1000);
 
 
 
@@ -399,56 +421,48 @@ function nowYear() {
 
 
 $('.story-btn').on('click', function() {
-
 $('.story-btn').removeClass('story-btn-alt');
 $('.menu-btn').removeClass('menu-btn-alt');
 $('.reserve-btn').removeClass('reserve-btn-alt');
 $('.reviews-btn').removeClass('reviews-btn-alt');
-
-// $storyBlock.addClass(.storyBlock);
-// $menu.addClass(.menu);
-// $reserveBlock.addClass(.reserveBlock);
-// $reviewsBlock.addClass(.reviewsBlock);
+$('.story-block').removeClass('story-block-alt');
+$('.menu').removeClass('menu-alt');
+$('.reserve-block').removeClass('reserve-block-alt');
+$('.reviews-block').removeClass('reviews-block-alt');
  });
 
 
 $('.menu-btn').on('click', function() {
-
 $('.story-btn').addClass('story-btn-alt');
 $('.menu-btn').addClass('menu-btn-alt');
 $('.reserve-btn').removeClass('reserve-btn-alt');
 $('.reviews-btn').removeClass('reviews-btn-alt');
-
-// $storyBlock.addClass(.storyBlock);
-// $menu.addClass(.menu);
-// $reserveBlock.addClass(.reserveBlock);
-// $reviewsBlock.addClass(.reviewsBlock);
+$('.story-block').addClass('story-block-alt');
+$('.menu').addClass('menu-alt');
+$('.reserve-block').removeClass('reserve-block-alt');
+$('.reviews-block').removeClass('reviews-block-alt');
  });
 
 $('.reserve-btn').on('click', function() {
-
 $('.story-btn').addClass('story-btn-alt');
 $('.menu-btn').removeClass('menu-btn-alt');
 $('.reserve-btn').addClass('reserve-btn-alt');
 $('.reviews-btn').removeClass('reviews-btn-alt');
-
-// $storyBlock.addClass(.storyBlock);
-// $menu.addClass(.menu);
-// $reserveBlock.addClass(.reserveBlock);
-// $reviewsBlock.addClass(.reviewsBlock);
+$('.story-block').addClass('story-block-alt');
+$('.menu').removeClass('menu-alt');
+$('.reserve-block').addClass('reserve-block-alt');
+$('.reviews-block').removeClass('reviews-block-alt');
  });
 
 $('.reviews-btn').on('click', function() {
-
 $('.story-btn').addClass('story-btn-alt');
 $('.menu-btn').removeClass('menu-btn-alt');
 $('.reserve-btn').removeClass('reserve-btn-alt');
 $('.reviews-btn').addClass('reviews-btn-alt');
-
-// $storyBlock.addClass(.storyBlock);
-// $menu.addClass(.menu);
-// $reserveBlock.addClass(.reserveBlock);
-// $reviewsBlock.addClass(.reviewsBlock);
+$('.story-block').addClass('story-block-alt');
+$('.menu').removeClass('menu-alt');
+$('.reserve-block').removeClass('reserve-block-alt');
+$('.reviews-block').addClass('reviews-block-alt');
  });
 
 

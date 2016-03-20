@@ -134,6 +134,12 @@ header {
     width: 90%;
  }
 
+
+ .special-name-price {
+ 	display: flex;
+ 	justify-content: space-between;
+ }
+
  #thumbs-up {
  	// background: #fefefc;
  	text-align: center;
@@ -315,7 +321,7 @@ header {
 
 }
 
-select#user-seat-preference {
+#user-seat-preference {
 	line-height: 25px;
 	width: 150px;
 	margin-bottom: 20px;
@@ -324,13 +330,72 @@ select#user-seat-preference {
 
 }
 
-
 //.seats {
 //	height: 25px;
 //	width: 150px;
 //	margin-bottom: 20px;
 //	font-size: 14px;
 //}
+
+.menu {
+	.beer-top {
+		display: flex;
+		justify-content: space-between;
+	}
+	.beer-bottom {
+		display: flex;
+		justify-content: space-between;
+	}
+	.food-top {
+		display: flex;
+		justify-content: space-between;
+	}
+	.game-top {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.menu-items {
+	font-size: 40px;
+}
+
+.beer, .food, .games {
+	font-size: 16px;
+}
+
+
+
+.story-block {
+	height: 100%
+}
+.story-block-alt {
+	height: 0;
+	overflow: hidden;
+}
+.menu {
+	height: 0;
+	overflow: hidden;
+}
+.menu-alt {
+	height: 100%;
+}
+.reserve-block {
+	height: 0;
+	overflow: hidden;
+}
+.reserve-block-alt {
+	height: 100%;
+}
+.reviews-block {
+	height: 0;
+	overflow: hidden;
+}
+.reviews-block-alt {
+	height: 100%;
+}
+
+
 
 // MAIN BELOW RIGHT // MAIN BELOW RIGHT
 
