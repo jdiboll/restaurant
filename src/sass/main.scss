@@ -173,7 +173,8 @@ header {
 	font-size: 30px;
 	margin: 0;
 	padding: 5px 10px 5px 10px;
-	&.story-btn-show {
+	&.story-btn {
+		border-bottom: none;
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
@@ -181,50 +182,65 @@ header {
 			background: #F7F7F7;
 		}
 	}
-	&.story-btn-hide {
+	&.story-btn-alt {
+		border-top: none;
+		border-left: none;
+		border-right: none;
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.menu-btn-hide {
+	&.menu-btn {
+		border-top: none;
+		border-left: none;
+		border-right: none;
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.menu-btn-show {
+	&.menu-btn-alt {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
+		border-bottom: none;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reserve-btn-hide {
+	&.reserve-btn {
+		border-top: none;
+		border-left: none;
+		border-right: none;
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reserve-btn-show {
+	&.reserve-btn-alt {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
+		border-bottom: none;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reviews-btn-hide {
+	&.reviews-btn {
+		border-top: none;
+		border-left: none;
+		border-right: none;
 		border-bottom: 1px solid #b2b2b2;
 		&:hover {
 			background: #F7F7F7;
 		}
 	}
-	&.reviews-btn-show {
+	&.reviews-btn-alt {
 		border-top: 1px solid #b2b2b2;
 		border-left: 1px solid #b2b2b2;
 		border-right: 1px solid #b2b2b2;
+		border-bottom: none;
 		&:hover {
 			background: #F7F7F7;
 		}
