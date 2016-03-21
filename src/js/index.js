@@ -304,7 +304,7 @@ formReviews.forEach(function(input) {
 
 
 
-$.ajax(url).then(function(data) {
+$.ajax(url).then(function todaySpecial(data) {
 
 	// console.log(data);
 
@@ -320,32 +320,32 @@ $.ajax(url).then(function(data) {
 	var mySpecial = "fucking things";
 	var today = new Date();
 	var dayOfWeek = today.getDay();
-	console.log(dayOfWeek);
+	//console.log(dayOfWeek);
 
 	if (dayOfWeek === 0) {
-		mySpecial = drinks[0];
-		console.log(mySpecial);
+		mySpecial = drinks[0];//
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 1) {
 		mySpecial = food[0];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 2) {
 		mySpecial === drinks[1];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 3) {
 		mySpecial = food[1];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 4) {
 		mySpecial = drinks[2];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 5) {
 		mySpecial = drinks[2];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 	} else if (dayOfWeek === 6) {
 		mySpecial = food[3];
-		console.log(mySpecial);
+		//console.log(mySpecial);
 
-		//var dailySpecial = window.setInterval(dayOfWeek, 1000);
-	
+		//var dailySpecial = window.setInterval(todaySpecial, 1000);
+
 	};
 
 	// return mySpecial;
