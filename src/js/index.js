@@ -367,6 +367,8 @@ $.ajax(url).then(function todaySpecial(data) {
 	
 //
 });
+ 		//var dailySpecial = window.setInterval(todaySpecial, 1000);
+
 
 	//var dailySpecial = window.setInterval(dayOfWeek, 1000);
 
