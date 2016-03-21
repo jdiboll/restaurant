@@ -296,13 +296,20 @@ header {
 
 .reserve-block, .reviews-block {
 	font-family: Arial;
+	position: relative;
+
 	select {
 		font-size: 14px;
 		height: 25px;
 	}
-//	input#date-request {
-//		font-size: 14px;
-//	}
+	button {
+		position: absolute;
+		right: 30px;
+		bottom: 0;
+		font-family: Arial;
+		font-size: 14px;
+		height: 30px;
+	}
 }
 
 #user-full-name, #user-phone, #user-email, #email-subject {
@@ -351,6 +358,14 @@ header {
 
 }
 
+// .submit {
+// 	font-family: Arial;
+// 	font-size: 16px;
+// 	position: absolute;
+// 	bottom: 20px;
+// 	right: 20px;
+
+// }
 //.seats {
 //	height: 25px;
 //	width: 150px;
