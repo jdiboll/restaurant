@@ -267,6 +267,27 @@ header {
 	//}
 }
 
+.story-block p {
+	font-family: Arial;
+	font-size: 14px;
+}
+
+.menu-items {
+	font-family: Arial;
+	i {
+		font-size: 16px;
+	}
+}
+.nameBeer, .nameFood, .nameGame {
+	font-family: 'Poiret One', cursive;
+	font-size: 20px;
+}
+
+.descripBeer, .descripFood, .descripGame {
+	font-family: Arial;
+	font-size: 14px;
+}
+
 #story-image {
 	border: 2px solid #b2b2b2;
 	box-sizing: border-box;
