@@ -343,6 +343,9 @@ $.ajax(url).then(function(data) {
 	} else if (dayOfWeek === 6) {
 		mySpecial = food[3];
 		console.log(mySpecial);
+
+		//var dailySpecial = window.setInterval(dayOfWeek, 1000);
+	
 	};
 
 	// return mySpecial;
@@ -357,11 +360,13 @@ $.ajax(url).then(function(data) {
 		</div>
 		<br />
 		<div class="specialDescrip">${mySpecial.description}</div>`;
+
+
 	
-// }
+//
 });
 
-
+	//var dailySpecial = window.setInterval(dayOfWeek, 1000);
 
 // Function for the bottom copyright date.
 
