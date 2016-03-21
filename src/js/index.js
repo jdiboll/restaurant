@@ -206,7 +206,7 @@ $.ajax(url).then(function(data) {
 // // 
 
 
-var $reservation = $('.reserve-block');
+var $reservation = $('.res');
 
 formArray.forEach(function(datum) {
 	var template;
@@ -219,11 +219,12 @@ formArray.forEach(function(datum) {
 	}
 	var html = template(datum);
 	$reservation.append(html);
+
 });
 
 
 
-var $reviews = $('.reviews-block');
+var $reviews = $('.rev');
 
 formReviews.forEach(function(input) {
 	var templater;
@@ -235,6 +236,7 @@ formReviews.forEach(function(input) {
 
 	var html_2 = templater(input);
 	$reviews.append(html_2);
+	return `<button>Sub</button>`
 });
 
 
