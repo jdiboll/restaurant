@@ -429,6 +429,7 @@ function nowYear() {
 
 
 
+
 $('.story-btn').on('click', function() {
 $('.story-btn').removeClass('story-btn-alt');
 $('.menu-btn').removeClass('menu-btn-alt');
