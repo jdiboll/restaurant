@@ -331,7 +331,7 @@ $.ajax(url).then(function todaySpecial(data) {
 		mySpecial = food[0];
 		//console.log(mySpecial);
 	} else if (dayOfWeek === 2) {
-		mySpecial === drinks[1];
+		mySpecial = drinks[1];
 		//console.log(mySpecial);
 	} else if (dayOfWeek === 3) {
 		mySpecial = food[1];
